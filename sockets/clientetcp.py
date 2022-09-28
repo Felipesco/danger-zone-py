@@ -4,3 +4,4 @@ import socket
 # SOCK_STREAM = TCP
 cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
+cliente.connect()
