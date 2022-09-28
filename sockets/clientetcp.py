@@ -3,9 +3,19 @@ import socket
 # AF_INET = IPv4
 # SOCK_STREAM = TCP
 cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+cliente.settimeout(5)
 
-cliente.connect(("142.250.218.195", 80))
+try:
+    cliente.connect(("google.com", 80))
 
-# print(cliente.send(""))
+    st = 'GET /http/1.1\nHost: google.com\n\n'
 
-cliente.recv(1024)
+    byt = st.encode()
+
+    cliente.send(byt)
+
+    resp = str(cliente.recv(1024))
+    print(resp)
+
+except:
+    print("Ocorreu erro na conexão")
