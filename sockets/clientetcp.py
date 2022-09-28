@@ -6,4 +6,6 @@ cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 cliente.connect(("142.250.218.195", 80))
 
-cliente.send("")
+# print(cliente.send(""))
+
+cliente.recv(1024)
