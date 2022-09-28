@@ -2,7 +2,7 @@ import socket
 
 servidor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ip = "0.0.0.0"
-porta = 22
+porta = 80
 
 try:
     servidor.bind((ip, porta))
