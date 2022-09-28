@@ -5,10 +5,13 @@ import socket
 cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 cliente.settimeout(5)
 
-try:
-    cliente.connect(("google.com", 80))
+ip = "127.0.0.1"
+porta = 22
 
-    st = 'GET /http/1.1\nHost: google.com\n\n'
+try:
+    cliente.connect((ip, porta))
+
+    st = 'GET /http/1.1\n\n'
 
     byt = st.encode()
 
