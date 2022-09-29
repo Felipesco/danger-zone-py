@@ -3,7 +3,7 @@ import socket
 
 servidor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ip = "0.0.0.0"
-porta = 80
+porta = 777
 
 try:
     servidor.bind((ip, porta))
@@ -14,7 +14,7 @@ try:
     print("Conexão -> IP: "+ endereco[0])
 
     while True:
-        dados = cliente.recv(1024)
+        dados = cliente.recv(utf_8(1024))
         
         if dados == "ProtocoloX-SECRETE":
             cliente.send(utf_8("Segredos de estado :o"))

@@ -6,7 +6,7 @@ cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 cliente.settimeout(5)
 
 ip = "127.0.0.1"
-porta = 80
+porta = 777
 
 try:
     cliente.connect((ip, porta))
@@ -20,5 +20,6 @@ try:
     resp = str(cliente.recv(1024))
     print(resp)
 
-except:
-    print("Ocorreu erro na conexão")
+except Exception as erro:
+    print("Ocorreu um erro")
+    print(erro)
