@@ -11,7 +11,7 @@ porta = 80
 try:
     cliente.connect((ip, porta))
 
-    st = 'GET /http/1.1\n\n'
+    st = 'ProtocoloX-SECRETE'
 
     byt = st.encode()
 
