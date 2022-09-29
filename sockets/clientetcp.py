@@ -6,7 +6,7 @@ cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 cliente.settimeout(5)
 
 ip = "127.0.0.1"
-porta = 22
+porta = 80
 
 try:
     cliente.connect((ip, porta))
